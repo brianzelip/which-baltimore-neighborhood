@@ -1,11 +1,11 @@
 {
-  "name": "bmore.space",
+  "name": "which-baltimore-neighborhood",
   "version": "0.2.0",
-  "description": "Web app that tells you which Baltimore neighborhood you're in via your browser's geolocation.",
-  "main": "main.js",
+  "description": "Geolocation web app that tells you which Baltimore neighborhood you're in.",
+  "main": "index.html",
   "repository": {
     "type": "git",
-    "url": "git@github.com:brianzelip/which-bmore-hood.git"
+    "url": "git@github.com:brianzelip/which-baltimore-neighborhood.git"
   },
   "keywords": [
     "geolocation",
