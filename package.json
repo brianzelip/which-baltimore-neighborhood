@@ -1,6 +1,6 @@
 {
   "name": "which-bmore-hood",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Geolocation web app that tells you which Baltimore neighborhood you're in.",
   "main": "main.js",
   "repository": {
