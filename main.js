@@ -13,6 +13,7 @@
 
     const latEl = document.getElementById('lat');
     const longEl = document.getElementById('long');
+    const neighborhoodEl = document.getElementById('neighborhood');
 
     if (!navigator.geolocation) {
       alert("Sorry, your browser doesn't have geolocation functionality ☹.");
@@ -30,6 +31,8 @@
           const polygon = feature.geometry.coordinates[0][0];
           return d3.polygonContains(polygon, point);
         });
+
+        neighborhoodEl.innerHTML = answer[0].properties.label;
 
         console.log('position is: ', position);
         console.log('ANSWER!!!!!:', answer);
