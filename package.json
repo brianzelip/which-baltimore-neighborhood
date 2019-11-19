@@ -1,0 +1,16 @@
+{
+  "name": "which-bmore-hood",
+  "version": "0.1.0",
+  "description": "Geolocation web app that tells you which Baltimore neighborhood you're in.",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:brianzelip/which-bmore-hood.git"
+  },
+  "keywords": [
+    "geolocation",
+    "Baltimore"
+  ],
+  "author": "Brian Zelip <bzelip@gmail.com> (https://zelip.me/)",
+  "license": "MIT"
+}
