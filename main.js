@@ -245,8 +245,11 @@
       }
     ]
   };
-  const point = [-76.62394894614718, 39.28682415080091];
-  const polygon = data.features[0].geometry.coordinates[0][0];
+
+  const work = [-76.62394894614718, 39.28682415080091];
+  const home = [-76.6315948427946, 39.309965949294266];
+  const Abell = data.features[0].geometry.coordinates[0][0];
+  const BH = data.features[1].geometry.coordinates[0][0];
 
   // XHR setup via
   // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequestEventTarget/onload#Example
@@ -262,8 +265,20 @@
   xhr.onload = function() {
     NEIGHBORHOODS = JSON.parse(this.responseText);
     console.log('2', typeof NEIGHBORHOODS);
-    const contains = d3.polygonContains(polygon, point);
-    console.log('THE BIG QUESTION:::::', contains);
+    const abelContainsWork = d3.polygonContains(Abell, work);
+    const abelContainsHome = d3.polygonContains(Abell, home);
+    const bhContainsWork = d3.polygonContains(BH, work);
+    const bhContainsHome = d3.polygonContains(BH, home);
+    console.log(
+      'ANSWERS TO THE BIG QUESTIONS\n\nIs the work point in Bolton Hill?',
+      bhContainsWork,
+      '\nIs the work point in Abell?',
+      abelContainsWork,
+      '\nIs the home point in Bolton Hill?',
+      bhContainsHome,
+      '\nis the home point in Abell?',
+      abelContainsHome
+    );
   };
 
   xhr.send();
