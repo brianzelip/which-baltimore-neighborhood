@@ -1,10 +1,10 @@
-# 📍 which-bmore-hood
+# bmore.space
 
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/brianzelip/which-bmore-hood)
 
-Geolocation web app that tells you which Baltimore neighborhood you're in.
+Web app that tells you which Baltimore neighborhood you're in via your browser's geolocation.
 
-https://brianzelip.github.io/which-bmore-hood
+https://brianzelip.github.io/bmore.space
 
 ## Data source
 
