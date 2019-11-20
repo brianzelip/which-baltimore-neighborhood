@@ -7,9 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.2.0] - 2019-11-19
+## [0.3.0] - 2019-11-19
 
-### Meta
+- branch: master
+- description: wire up custom domain w/ https via netlify
+
+## [0.2.0] - 2019-11-19
 
 - branch: master
 - description: get d3-polygon working to filter neighborhoods by the user's geolocation
@@ -27,8 +30,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - given the user's geolocation coords, filter the neighborhood multipolygons for the neighborhood that contains the coords.
 
 ## [0.1.0] - 2019-11-18
-
-### Meta
 
 - branch: master
 - description: get basic functionality working
