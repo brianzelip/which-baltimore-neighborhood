@@ -6,10 +6,15 @@ Work in progress geolocation web app that tells you which Baltimore neighborhood
 
 https://bmore.space
 
-## Road map
+## Road map to v1.0.0
 
 - [ ] make it pretty 💅
-- [ ] progressive web app-ize it 💪
+- [ ] progressive web app-ify it 💪
+- [ ] provide feedback to the user about the 3 classes of errors
+  1. your browser doesn't support geolocation
+  2. your os appears to have disabled location services for your browser
+  3. you appear to be outside the city of Baltimore
+- [ ] add an about modal or attribution links
 
 ## Data source
 
