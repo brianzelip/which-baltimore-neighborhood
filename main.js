@@ -1,3 +1,5 @@
+import * as d3 from 'd3-polygon';
+
 (function() {
   // XHR setup via
   // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequestEventTarget/onload#Example
