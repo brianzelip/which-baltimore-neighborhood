@@ -1,7 +1,7 @@
 {
   "name": "which-baltimore-neighborhood",
   "version": "0.3.0",
-  "description": "Geolocation web app that tells you which Baltimore neighborhood you're in.",
+  "description": "Geolocation progressive web app that tells you which Baltimore neighborhood you're in.",
   "main": "index.html",
   "repository": {
     "type": "git",
@@ -12,5 +12,15 @@
     "Baltimore"
   ],
   "author": "Brian Zelip <bzelip@gmail.com> (https://zelip.me/)",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "rm -rf dist .cache && parcel build index.html"
+  },
+  "dependencies": {
+    "d3-polygon": "^1.0.6"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
 }
