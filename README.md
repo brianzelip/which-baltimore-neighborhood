@@ -2,7 +2,7 @@
 
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/brianzelip/which-baltimore-neighborhood) [![Netlify Status](https://api.netlify.com/api/v1/badges/f1aa9d24-1645-4d71-b2d1-299d022913ae/deploy-status)](https://app.netlify.com/sites/which-bmore-hood/deploys)
 
-Work in progress geolocation web app that tells you which Baltimore neighborhood you're in.
+Geolocation progressive web app that tells you which Baltimore neighborhood you're in.
 
 https://bmore.space
 
@@ -18,6 +18,8 @@ https://bmore.space
 
 ## Data source
 
-The geospatial data used in this project comes from [Open Baltimore Neighborhoods dataset](https://data.baltimorecity.gov/Neighborhoods/Neighborhoods/5cni-ybar), a "polygon feature representing the boundaries of Baltimore City's neighborhoods as of the year 2010".
+The geospatial data used in this project comes from the [_Neighborhoods_ dataset](https://data.baltimorecity.gov/Neighborhoods/Neighborhoods/5cni-ybar) published via [Open Baltimore](https://data.baltimorecity.gov/), the City of Baltimore's open data initiative. The _Neighborhoods_ dataset is described as
 
-See the [dev docs for this dataset](https://dev.socrata.com/foundry/data.baltimorecity.gov/h3fx-54q3).
+> Polygon feature representing the boundaries of Baltimore City's neighborhoods as of the year 2010.
+
+See also the [developer docs for the _Neighborhoods_ dataset](https://dev.socrata.com/foundry/data.baltimorecity.gov/h3fx-54q3).
