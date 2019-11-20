@@ -13,9 +13,8 @@ import * as d3 from 'd3-polygon';
   xhr.onload = function() {
     const NEIGHBORHOODS = JSON.parse(this.responseText);
 
-    const latEl = document.getElementById('lat');
-    const longEl = document.getElementById('long');
     const neighborhoodEl = document.getElementById('neighborhood');
+    const coordinatesEl = document.getElementById('coordinates');
 
     if (!navigator.geolocation) {
       alert("Sorry, your browser doesn't have geolocation functionality ☹.");
@@ -26,15 +25,13 @@ import * as d3 from 'd3-polygon';
         const long = position.coords.longitude;
         const point = [long, lat];
 
-        latEl.innerHTML = lat;
-        longEl.innerHTML = long;
-
         const answer = NEIGHBORHOODS.features.filter(feature => {
           const polygon = feature.geometry.coordinates[0][0];
           return d3.polygonContains(polygon, point);
         });
 
         neighborhoodEl.innerHTML = answer[0].properties.label;
+        coordinatesEl.innerHTML = `My coordinates: ${lat}, ${long}`;
 
         console.log('position is: ', position);
         console.log('ANSWER!!!!!:', answer);
