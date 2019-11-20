@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+.vh100 {
+  min-height: 100vh;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  /* family via https://css-tricks.com/snippets/css/system-font-stack/ */
+}
