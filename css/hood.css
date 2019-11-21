@@ -5,57 +5,17 @@
   --gray-light: rgb(158, 163, 185);
   --blue: rgb(39, 189, 246);
   --blue-light: #3f85b3;
-}
 
-html,
-body {
-  min-height: 100vh;
+  --bg: #ddd;
+  --fg: var(--black);
 }
 
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   /* family via https://css-tricks.com/snippets/css/system-font-stack/ */
-  background-color: var(--black);
-  color: var(--white);
-}
-
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-main {
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 1rem;
-  padding: 2rem;
-  border-radius: 8px;
-  background-color: var(--gray-dark);
-}
-
-h1 {
-  margin: 0;
-  font-size: 2rem;
-  font-weight: normal;
-}
-
-#neighborhood {
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-  margin: 0;
-  font-size: 2rem;
-  color: var(--blue);
-}
-
-#coordinates {
-  margin: 0;
-  font-family: 'Courier New', Courier, monospace;
-  color: var(--white);
+  background-color: var(--bg);
+  color: var(--fg);
+  text-align: center;
 }
