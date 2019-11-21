@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.4.1] - 2019-11-21
+
+- branch: d3
+- description: Import only `polygonContains` from d3-polygon to decrease bundle size
+
+### Updated
+
+- main.js: Refactor import and usage of d3-polygon
+
 ## [0.4.0] - 2019-11-20
 
 - branch: master
