@@ -31,7 +31,7 @@ import { polygonContains } from 'd3-polygon';
         });
 
         neighborhoodEl.innerHTML = answer[0].properties.label;
-        coordinatesEl.innerHTML = `My coordinates: ${lat}, ${long}`;
+        coordinatesEl.innerHTML = `Your coordinates: ${lat}, ${long}`;
 
         console.log('position is: ', position);
         console.log('ANSWER!!!!!:', answer);
