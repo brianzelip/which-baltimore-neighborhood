@@ -1,4 +1,4 @@
-import * as d3 from 'd3-polygon';
+import { polygonContains } from 'd3-polygon';
 
 (function() {
   // XHR setup via
@@ -27,7 +27,7 @@ import * as d3 from 'd3-polygon';
 
         const answer = NEIGHBORHOODS.features.filter(feature => {
           const polygon = feature.geometry.coordinates[0][0];
-          return d3.polygonContains(polygon, point);
+          return polygonContains(polygon, point);
         });
 
         neighborhoodEl.innerHTML = answer[0].properties.label;
