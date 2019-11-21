@@ -16,6 +16,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - main.js: Refactor import and usage of d3-polygon
 
+### Performance result
+
+This decreased the netlify-served js bundle from 2.46kb transferred to 2.30kb transferred 🎉
+
 ## [0.4.0] - 2019-11-20
 
 - branch: master
