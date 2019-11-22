@@ -33,13 +33,16 @@
       a {
         text-decoration: none;
         color: inherit;
+        transition: all 150ms ease-in-out;
       }
       a:hover {
-        text-decoration: underline;
+        box-shadow: 0 1px;
+        /* text-decoration: underline; */
+        transition: all 150ms ease-in-out;
       }
 
       .url {
-        display: block;
+        display: inline-block;
         font-size: 1.5rem;
       }
 
@@ -56,6 +59,12 @@
         margin-bottom: calc(2rem + var(--shadow-thickness));
         font-size: 1.75rem;
         box-shadow: 0 var(--shadow-thickness);
+        transition: all 200ms ease-in-out;
+      }
+      [data-neighborhood]:hover {
+        text-decoration: none;
+        box-shadow: 0 calc(var(--shadow-thickness) * 1.333);
+        transition: all 200ms ease-in-out;
       }
 
       [data-coordinates-wrapper] {
