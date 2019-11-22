@@ -14,7 +14,10 @@ import { polygonContains } from 'd3-polygon';
     const NEIGHBORHOODS = JSON.parse(this.responseText);
 
     const neighborhoodEl = document.querySelector('[data-neighborhood]');
-    const coordinatesEl = document.querySelector('[data-coordinates]');
+    const coordinatesWrapperEl = document.querySelector(
+      '[data-coordinates-wrapper'
+    );
+    const coordinatesEL = document.createElement('pre');
 
     if (!navigator.geolocation) {
       alert("Sorry, your browser doesn't have geolocation functionality ☹.");
@@ -30,8 +33,10 @@ import { polygonContains } from 'd3-polygon';
           return polygonContains(polygon, point);
         });
 
+        coordinatesEL.textContent = `${lat}, ${long}`;
         neighborhoodEl.innerHTML = answer[0].properties.label;
-        coordinatesEl.innerHTML = `Your coordinates: ${lat}, ${long}`;
+        coordinatesWrapperEl.appendChild(coordinatesEL);
+        coordinatesWrapperEl.classList.remove('hide');
 
         console.log('position is: ', position);
         console.log('ANSWER!!!!!:', answer);
