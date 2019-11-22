@@ -53,6 +53,7 @@ import { polygonContains } from 'd3-polygon';
         coordinatesWrapperEl.classList.replace('hide', 'fadein');
 
         coordinatesEL.addEventListener('click', () => {
+          // writeText only works on FF, chrome, android at time of publishing
           navigator.clipboard.writeText(coordsAsText).then(
             function() {
               console.log('Coordinates written to the clipboard!');
