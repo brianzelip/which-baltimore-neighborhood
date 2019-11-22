@@ -26,6 +26,7 @@ import { polygonContains } from 'd3-polygon';
       function geo_success(position) {
         const lat = position.coords.latitude;
         const long = position.coords.longitude;
+        const coordsAsText = `${lat}, ${long}`;
         const point = [long, lat];
 
         const HOOD = NEIGHBORHOODS.features.filter(feature => {
@@ -39,7 +40,7 @@ import { polygonContains } from 'd3-polygon';
           return str.replace(/\s/g, '+');
         }
 
-        coordinatesEL.textContent = `${lat}, ${long}`;
+        coordinatesEL.textContent = coordsAsText;
         neighborhoodEl.setAttribute(
           'href',
           `https://en.wikipedia.org/wiki/Special:Search?search=${urlEncode(
@@ -50,6 +51,17 @@ import { polygonContains } from 'd3-polygon';
         neighborhoodEl.classList.replace('hide', 'fadein');
         coordinatesWrapperEl.appendChild(coordinatesEL);
         coordinatesWrapperEl.classList.replace('hide', 'fadein');
+
+        coordinatesEL.addEventListener('click', () => {
+          navigator.clipboard.writeText(coordsAsText).then(
+            function() {
+              console.log('Coordinates written to the clipboard!');
+            },
+            function() {
+              console.log('Coordinates failed to write to the clipboard');
+            }
+          );
+        });
 
         console.log('position is: ', position);
         console.log('ANSWER!!!!!:', HOOD);
