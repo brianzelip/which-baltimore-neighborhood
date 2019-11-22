@@ -13,8 +13,8 @@ import { polygonContains } from 'd3-polygon';
   xhr.onload = function() {
     const NEIGHBORHOODS = JSON.parse(this.responseText);
 
-    const neighborhoodEl = document.getElementById('neighborhood');
-    const coordinatesEl = document.getElementById('coordinates');
+    const neighborhoodEl = document.querySelector('[data-neighborhood]');
+    const coordinatesEl = document.querySelector('[data-coordinates]');
 
     if (!navigator.geolocation) {
       alert("Sorry, your browser doesn't have geolocation functionality ☹.");
