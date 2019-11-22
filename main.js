@@ -48,7 +48,7 @@ import { polygonContains } from 'd3-polygon';
         );
         neighborhoodEl.innerHTML = hood;
         coordinatesWrapperEl.appendChild(coordinatesEL);
-        coordinatesWrapperEl.classList.remove('hide');
+        coordinatesWrapperEl.classList.replace('hide', 'fadein');
 
         console.log('position is: ', position);
         console.log('ANSWER!!!!!:', answer);
