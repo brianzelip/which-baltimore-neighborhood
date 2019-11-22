@@ -5,16 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>📍 Which Baltimore Neighborhood</title>
-    <link rel="stylesheet" href="css/hood.css" />
+    <style>
+      :root {
+        --bg-darkmode: #1e0905;
+        --fg-darkmode: #12b337;
+        --bg-lightmode: #fefafd;
+        --fg-lightmode: #51788f;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+        text-align: center;
+      }
+
+      .dark {
+        background-color: var(--bg-darkmode);
+        color: var(--fg-darkmode);
+      }
+
+      .light {
+        background-color: var(--bg-lightmode);
+        color: var(--fg-lightmode);
+      }
+
+      .url {
+        font-size: 1.5rem;
+      }
+    </style>
   </head>
 
-  <body>
-    <main>
-      <h1>bmore.space</h1>
-      <h1>Which Baltimore neighborhood are you in?</h1>
-      <p id="neighborhood"></p>
-      <p id="coordinates"></p>
-    </main>
+  <body class="dark">
+    <p class="url">bmore.space</p>
+    <h1>Which Baltimore neighborhood are you in?</h1>
+    <p id="neighborhood"></p>
+    <p id="coordinates"></p>
     <script src="main.js"></script>
   </body>
 </html>
