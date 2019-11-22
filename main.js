@@ -15,7 +15,7 @@ import { polygonContains } from 'd3-polygon';
 
     const neighborhoodEl = document.querySelector('[data-neighborhood]');
     const coordinatesWrapperEl = document.querySelector(
-      '[data-coordinates-wrapper'
+      '[data-coordinates-wrapper]'
     );
     const coordinatesEL = document.createElement('pre');
 
@@ -28,30 +28,31 @@ import { polygonContains } from 'd3-polygon';
         const long = position.coords.longitude;
         const point = [long, lat];
 
-        const answer = NEIGHBORHOODS.features.filter(feature => {
+        const HOOD = NEIGHBORHOODS.features.filter(feature => {
           const polygon = feature.geometry.coordinates[0][0];
           return polygonContains(polygon, point);
         });
+
+        const hoodName = HOOD[0].properties.label;
 
         function urlEncode(str) {
           return str.replace(/\s/g, '+');
         }
 
-        const hood = answer[0].properties.label;
-
         coordinatesEL.textContent = `${lat}, ${long}`;
         neighborhoodEl.setAttribute(
           'href',
           `https://en.wikipedia.org/wiki/Special:Search?search=${urlEncode(
-            hood
+            hoodName
           )}`
         );
-        neighborhoodEl.innerHTML = hood;
+        neighborhoodEl.innerHTML = hoodName;
+        neighborhoodEl.classList.replace('hide', 'fadein');
         coordinatesWrapperEl.appendChild(coordinatesEL);
         coordinatesWrapperEl.classList.replace('hide', 'fadein');
 
         console.log('position is: ', position);
-        console.log('ANSWER!!!!!:', answer);
+        console.log('ANSWER!!!!!:', HOOD);
       }
 
       function geo_error() {
