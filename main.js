@@ -33,8 +33,20 @@ import { polygonContains } from 'd3-polygon';
           return polygonContains(polygon, point);
         });
 
+        function urlEncode(str) {
+          return str.replace(/\s/g, '+');
+        }
+
+        const hood = answer[0].properties.label;
+
         coordinatesEL.textContent = `${lat}, ${long}`;
-        neighborhoodEl.innerHTML = answer[0].properties.label;
+        neighborhoodEl.setAttribute(
+          'href',
+          `https://en.wikipedia.org/wiki/Special:Search?search=${urlEncode(
+            hood
+          )}`
+        );
+        neighborhoodEl.innerHTML = hood;
         coordinatesWrapperEl.appendChild(coordinatesEL);
         coordinatesWrapperEl.classList.remove('hide');
 
