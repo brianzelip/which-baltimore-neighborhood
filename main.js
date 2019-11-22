@@ -53,14 +53,18 @@ import { polygonContains } from 'd3-polygon';
         coordinatesWrapperEl.classList.replace('hide', 'fadein');
 
         coordinatesEL.addEventListener('click', () => {
-          navigator.clipboard.writeText(coordsAsText).then(
-            function() {
-              console.log('Coordinates written to the clipboard!');
-            },
-            function() {
-              console.log('Coordinates failed to write to the clipboard');
-            }
-          );
+          if (navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(coordsAsText).then(
+              function() {
+                console.log('Coordinates written to the clipboard!');
+              },
+              function() {
+                console.log('Coordinates failed to write to the clipboard');
+              }
+            );
+          } else {
+            console.log('NO navigator.clipboard.writeText');
+          }
         });
 
         console.log('position is: ', position);
