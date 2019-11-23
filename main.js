@@ -13,6 +13,7 @@ import { polygonContains } from 'd3-polygon';
   xhr.onload = function() {
     const NEIGHBORHOODS = JSON.parse(this.responseText);
 
+    const hoodWrapEl = document.querySelector('[data-hood-wrap]');
     const neighborhoodEl = document.querySelector('[data-neighborhood]');
     const coordinatesWrapperEl = document.querySelector(
       '[data-coordinates-wrapper]'
@@ -41,14 +42,14 @@ import { polygonContains } from 'd3-polygon';
         }
 
         coordinatesEL.textContent = coordsAsText;
-        neighborhoodEl.setAttribute(
+        hoodWrapEl.setAttribute(
           'href',
           `https://en.wikipedia.org/wiki/Special:Search?search=${urlEncode(
             hoodName
           )}`
         );
         neighborhoodEl.innerHTML = hoodName;
-        neighborhoodEl.classList.replace('hide', 'fadein');
+        hoodWrapEl.classList.replace('hide', 'fadein');
         coordinatesWrapperEl.appendChild(coordinatesEL);
         coordinatesWrapperEl.classList.replace('hide', 'fadein');
 
