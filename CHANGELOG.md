@@ -7,6 +7,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.8.0] 2019-11-23
+
+- branch: inline-css
+- description: refactor the css from inlined in the source index.html to an external css file to be inlined into the built index.html. This was spawned because I didn't like html being the project's main language as depicted via github. The reason the html file is so large is because of the css. So extracting it out to its own file will change that. For perf reasons, I'm going to inline the css into the built index.html file that is served via netlify.
+
+### Added
+
+- dev dependency: [parcel-plugin-inliner](https://github.com/shff/parcel-plugin-inliner)
+- css/hood.css: copy css from index.html
+
+### Updated
+
+- index.html: remove css, link to hood.css
+- package.json: add `--public-url .` to build script via the inliner plugin docs:
+
+> Very important!
+>
+> You have to run the build step in Parcel with the --public-url . option for the inliner to actually find the files. If you leave this out the default is /, and the inliner won't be able to look for the files in the right location.
+>
+> Example:
+>
+> `parcel build app/index.html --public-url .`
+
 ## [v0.7.0] 2019-11-23
 
 - branch: color-themes
