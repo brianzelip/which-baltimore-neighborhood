@@ -5,15 +5,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>📍 Which Baltimore Neighborhood</title>
-    <link rel="stylesheet" href="css/hood.css" />
+    <meta
+      name="description"
+      content="Geolocation progressive web app that tells you which Baltimore neighborhood you're in"
+    />
+    <meta name="author" content="Brian Zelip" />
+    <link rel="author" href="https://zelip.me" />
+    <link rel="author" href="https://bmore.space/humans.txt" />
+    <style>
+      :root {
+        --bg-darkmode: rgb(51, 51, 51);
+        --fg-darkmode: #12b337;
+        --bg-lightmode: #fefafd;
+        --fg-lightmode: #51788f;
+      }
+
+      body {
+        margin: 1rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+        text-align: center;
+      }
+
+      .dark {
+        background-color: var(--bg-darkmode);
+        color: var(--fg-darkmode);
+      }
+
+      .light {
+        background-color: var(--bg-lightmode);
+        color: var(--fg-lightmode);
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        transition: all 150ms ease-in-out;
+      }
+      a:hover {
+        box-shadow: 0 1px;
+        /* text-decoration: underline; */
+        transition: all 150ms ease-in-out;
+      }
+
+      .url {
+        display: inline-block;
+        font-size: 1.5rem;
+      }
+
+      h1 {
+        margin: 3rem 0;
+        font-size: 2.25rem;
+        font-weight: normal;
+      }
+
+      .neighborhood {
+        --shadow-thickness: 0.5rem;
+        display: inline-block;
+        margin-top: 2rem;
+        margin-bottom: calc(2rem + var(--shadow-thickness));
+        font-size: 1.75rem;
+        box-shadow: 0 var(--shadow-thickness);
+        transition: all 200ms ease-in-out;
+      }
+      .neighborhood:hover {
+        text-decoration: none;
+        box-shadow: 0 calc(var(--shadow-thickness) * 1.333);
+        transition: all 200ms ease-in-out;
+      }
+
+      .coordinates-wrapper {
+        margin: 2rem 0 0 0;
+      }
+
+      pre {
+        font-size: 1rem;
+        overflow-x: scroll;
+      }
+
+      .hide {
+        opacity: 0;
+      }
+
+      .fadein {
+        opacity: 1;
+        transition: all 300ms ease-in-out;
+      }
+
+      .fadein.delay {
+        transition-delay: 300ms;
+      }
+
+      footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding-bottom: 2rem;
+      }
+    </style>
   </head>
 
-  <body>
-    <main>
-      <h1>Which Baltimore neighborhood am I in?</h1>
-      <p id="neighborhood"></p>
-      <p id="coordinates"></p>
-    </main>
+  <body class="dark">
+    <a href="https://bmore.space" class="url">bmore.space</a>
+    <h1>Which Baltimore neighborhood are you in?</h1>
+    <a class="neighborhood hide" data-neighborhood></a>
+    <p class="coordinates-wrapper hide delay" data-coordinates-wrapper>
+      Your coordinates:
+    </p>
+    <footer>
+      by <a href="https://zelip.me">Brian Zelip</a> |
+      <a href="https://github.com/brianzelip/which-baltimore-neighborhood"
+        >source</a
+      >
+      | no data collected
+    </footer>
     <script src="main.js"></script>
   </body>
 </html>
