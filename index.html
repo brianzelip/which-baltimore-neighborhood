@@ -144,8 +144,21 @@
         transition-delay: 300ms;
       }
 
-      footer {
+      footer,
+      footer a,
+      footer p {
         font-size: 0.875rem;
+      }
+      @media screen and (min-width: 720px) {
+        footer,
+        footer a,
+        footer p {
+          font-size: 1rem;
+        }
+      }
+
+      footer {
+        padding-top: 1rem;
       }
       @media screen and (min-height: 420px) {
         footer {
@@ -153,20 +166,19 @@
           bottom: 0;
           left: 0;
           right: 0;
+          padding-top: 0;
           padding-bottom: 1rem;
-          font-size: 1rem;
         }
       }
 
       footer a:first-of-type {
         margin-right: 0.2rem;
       }
-      footer p {
-        display: inline-block;
-        margin: 0 0.2rem 0 0.2rem;
-      }
       footer a:last-of-type {
         margin-left: 0.2rem;
+      }
+      footer p {
+        margin: 0.5rem 0 0 0;
       }
     </style>
   </head>
@@ -183,11 +195,10 @@
       by
       <a href="https://zelip.me">Brian Zelip</a>
       &middot;
-      <p>no data collected</p>
-      &middot;
       <a href="https://github.com/brianzelip/which-baltimore-neighborhood"
         >source</a
       >
+      <p>privacy respected, no data collected</p>
     </footer>
     <script src="main.js"></script>
   </body>
