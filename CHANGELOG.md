@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.7.0] 2019-11-23
+
+- branch: color-themes
+- description: Make a button to change the color theme
+
+### Updated
+
+- index.html: Add button w/ svg via jxnblk
+- main.js: Add color theme selection logic
+
 ## [0.6.0] 2019-11-23
 
 - branch: responsive
