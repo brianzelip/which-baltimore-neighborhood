@@ -1,0 +1,25 @@
+/* 📍 Which Baltimore Neighborhood */
+/* https://bmore.space */
+
+/* TEAM */
+  Designer/developer: Brian Zelip
+  Site: https://zelip.me
+  From: Baltimore, Maryland, USA
+
+/* DEVELOPMENT STACK */
+  git
+  npm
+  Parcel.js
+
+/* DEPLOYMENT STACK */
+  Custom domain
+  GitHub
+  Netlify
+
+/* THANKS */
+  MDN: https://developer.mozilla.org/en-US/
+
+/* SITE */
+  Last update: [in current iteration]
+  Language: en-US
+  Doctype: html5
