@@ -10,7 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [v0.8.0] 2019-11-23
 
 - branch: inline-css
-- description: refactor the css from inlined in the source index.html to an external css file to be inlined into the built index.html. This was spawned because I didn't like html being the project's main language as depicted via github. The reason the html file is so large is because of the css. So extracting it out to its own file will change that. For perf reasons, I'm going to inline the css into the built index.html file that is served via netlify.
+- description:
+  - refactor the css from inlined in the source index.html to an external css file to be inlined into the built index.html. This was spawned because I didn't like html being the project's main language as depicted via github. The reason the html file is so large is because of the css. So extracting it out to its own file will change that. For perf reasons, I'm going to inline the css into the built index.html file that is served via netlify.
+  - the effect of using this inliner plugin also inlines the JS, so that the app is wholy contained in the built index.html file. I'll have to compare the fully served netlify files (ie: the state of bmore.space after merging this branch with master) to get the real numbers for before/after comparison
 
 ### Added
 
