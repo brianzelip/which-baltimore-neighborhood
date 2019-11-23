@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.5.1] 2019-11-23
+
+- branch: master
+- description: Update UI design
+
+### Updated
+
+- readme: check some todos
+- index.html
+  - decrease `--shadow-thickness` for neighborhood name
+  - removed the self-referential link at the top of the document
+  - added a wrapper around the neighborhood text for adding some emphasis on the app's punchline. make the wrapper an anchor so the hood name's box-shadow remains only as wide as the name text
+  - set neighborhood colors according to the theme
+- main.js:
+  - implement new neighborhood wrapper logic
+
 ## [0.5.0] 2019-11-22
 
 - branch: basic styling
