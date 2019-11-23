@@ -1,6 +1,6 @@
 {
   "name": "which-baltimore-neighborhood",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "description": "Geolocation progressive web app that tells you which Baltimore neighborhood you're in.",
   "main": "index.html",
   "repository": {
