@@ -18,6 +18,8 @@
         --fg-darkmode: #12b337;
         --bg-lightmode: #fefafd;
         --fg-lightmode: #51788f;
+
+        --shadow-thickness: 0.3rem;
       }
 
       body {
@@ -59,11 +61,18 @@
         font-weight: normal;
       }
 
-      .neighborhood {
-        --shadow-thickness: 0.3rem;
+      .hood-wrap {
         display: inline-block;
-        margin-top: 2rem;
-        margin-bottom: calc(2rem + var(--shadow-thickness));
+        background-color: var(--bg-lightmode);
+        border-radius: 4px;
+      }
+      .hood-wrap:hover .neighborhood {
+        box-shadow: 0 calc(var(--shadow-thickness) * 1.333);
+        transition: all 200ms ease-in-out;
+      }
+
+      .neighborhood {
+        margin: 1.75rem 1.75rem calc(1.75rem + var(--shadow-thickness)) 1.75rem;
         font-size: 1.75rem;
         box-shadow: 0 var(--shadow-thickness);
         transition: all 200ms ease-in-out;
@@ -108,7 +117,9 @@
 
   <body class="dark">
     <h1>Which Baltimore neighborhood are you in?</h1>
-    <a class="neighborhood hide" data-neighborhood></a>
+    <a class="hood-wrap hide" data-hood-wrap>
+      <p class="neighborhood" data-neighborhood></p>
+    </a>
     <p class="coordinates-wrapper hide delay" data-coordinates-wrapper>
       Your coordinates:
     </p>
