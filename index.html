@@ -56,9 +56,15 @@
       }
 
       h1 {
-        margin: 3rem 0;
-        font-size: 2.25rem;
+        margin: 2rem 0 3rem 0;
+        font-size: 1.75rem;
         font-weight: normal;
+      }
+      @media screen and (min-width: 720px) {
+        h1 {
+          margin: 3rem 0;
+          font-size: 2.25rem;
+        }
       }
 
       .hood-wrap {
@@ -80,11 +86,18 @@
       }
 
       .neighborhood {
-        margin: 1.75rem 1.75rem calc(1.75rem + var(--shadow-thickness)) 1.75rem;
-        font-size: 1.75rem;
+        margin: 1.5rem 1.5rem calc(1.5rem + var(--shadow-thickness)) 1.5rem;
+        font-size: 1.5rem;
         font-weight: bold;
         box-shadow: 0 var(--shadow-thickness);
         transition: all 200ms ease-in-out;
+      }
+      @media screen and (min-width: 720px) {
+        .neighborhood {
+          margin: 1.75rem 1.75rem calc(1.75rem + var(--shadow-thickness))
+            1.75rem;
+          font-size: 1.75rem;
+        }
       }
       body.dark .neighborhood {
         color: var(--bg-darkmode);
@@ -99,12 +112,23 @@
 
       .coordinates-wrapper {
         margin: 3rem 0 0 0;
-        font-size: 1.25rem;
+        font-size: 1.125rem;
+      }
+      @media screen and (min-width: 720px) {
+        .coordinates-wrapper {
+          font-size: 1.25rem;
+        }
       }
 
       pre {
-        font-size: 1rem;
+        padding-bottom: 0.875rem;
+        font-size: 0.875rem;
         overflow-x: scroll;
+      }
+      @media screen and (min-width: 720px) {
+        pre {
+          font-size: 1rem;
+        }
       }
 
       .hide {
@@ -121,11 +145,28 @@
       }
 
       footer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding-bottom: 2rem;
+        font-size: 0.875rem;
+      }
+      @media screen and (min-height: 420px) {
+        footer {
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          padding-bottom: 1rem;
+          font-size: 1rem;
+        }
+      }
+
+      footer a:first-of-type {
+        margin-right: 0.2rem;
+      }
+      footer p {
+        display: inline-block;
+        margin: 0 0.2rem 0 0.2rem;
+      }
+      footer a:last-of-type {
+        margin-left: 0.2rem;
       }
     </style>
   </head>
@@ -140,15 +181,11 @@
     </p>
     <footer>
       by
-      <a style="margin-right: .2rem" href="https://zelip.me">Brian Zelip</a>
+      <a href="https://zelip.me">Brian Zelip</a>
       &middot;
-      <p style="margin-right: .2rem; margin-left: .2rem; display: inline-block">
-        no data collected
-      </p>
+      <p>no data collected</p>
       &middot;
-      <a
-        style="margin-left: .2rem"
-        href="https://github.com/brianzelip/which-baltimore-neighborhood"
+      <a href="https://github.com/brianzelip/which-baltimore-neighborhood"
         >source</a
       >
     </footer>
