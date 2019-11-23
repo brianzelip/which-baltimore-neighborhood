@@ -65,6 +65,12 @@
         display: inline-block;
         border-radius: 4px;
       }
+      body.dark .hood-wrap {
+        background-color: var(--fg-darkmode);
+      }
+      body.light .hood-wrap {
+        background-color: var(--fg-lightmode);
+      }
       .hood-wrap:hover {
         box-shadow: none;
       }
@@ -78,6 +84,12 @@
         font-size: 1.75rem;
         box-shadow: 0 var(--shadow-thickness);
         transition: all 200ms ease-in-out;
+      }
+      body.dark .neighborhood {
+        color: var(--bg-darkmode);
+      }
+      body.light .neighborhood {
+        color: var(--bg-lightmode);
       }
       .neighborhood:hover {
         box-shadow: 0 calc(var(--shadow-thickness) * 1.333);
