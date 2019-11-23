@@ -145,11 +145,17 @@
       }
 
       footer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding-bottom: 1rem;
+        font-size: 0.875rem;
+      }
+      @media screen and (min-height: 420px) {
+        footer {
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          padding-bottom: 1rem;
+          font-size: 1rem;
+        }
       }
 
       footer a:first-of-type {
