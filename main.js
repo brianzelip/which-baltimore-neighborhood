@@ -1,6 +1,18 @@
 import { polygonContains } from 'd3-polygon';
 
 (function() {
+  const buttonEl = document.querySelector('button');
+
+  buttonEl.addEventListener('click', function() {
+    let currentTheme = document.body.className;
+
+    if (currentTheme === 'dark') {
+      document.body.className = 'light';
+    } else if (currentTheme === 'light') {
+      document.body.className = 'dark';
+    }
+  });
+
   // XHR setup via
   // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequestEventTarget/onload#Example
 
