@@ -7,6 +7,35 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.5.0] 2019-11-22
+
+- branch: basic styling
+- description:
+  - update styling
+  - update markup
+  - update app logic accordingly
+
+### Added
+
+- humans.text
+
+### Updated
+
+- index.html
+  - add style tag to head
+  - add metadata in head
+  - add footer
+  - update markup
+- main.js
+  - update logic according to new markup and class names
+  - animate the rendering of neighborhood name and coordinates
+  - copy the coordinates on click (only works in FF, chrome, android, opera)
+  - make the neighborhood name into a link that searches wikipedia for the neighborhood, often leading directly to the neighborhood's wiki page
+
+### Removed
+
+- css/hood.css - deleted in favor of writing styles in index.html head
+
 ## [0.4.1] - 2019-11-21
 
 - branch: d3
