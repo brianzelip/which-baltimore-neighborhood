@@ -63,8 +63,10 @@
 
       .hood-wrap {
         display: inline-block;
-        background-color: var(--bg-lightmode);
         border-radius: 4px;
+      }
+      .hood-wrap:hover {
+        box-shadow: none;
       }
       .hood-wrap:hover .neighborhood {
         box-shadow: 0 calc(var(--shadow-thickness) * 1.333);
@@ -78,7 +80,6 @@
         transition: all 200ms ease-in-out;
       }
       .neighborhood:hover {
-        text-decoration: none;
         box-shadow: 0 calc(var(--shadow-thickness) * 1.333);
         transition: all 200ms ease-in-out;
       }
