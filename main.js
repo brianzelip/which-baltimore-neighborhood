@@ -31,6 +31,7 @@ import { polygonContains } from 'd3-polygon';
       '[data-coordinates-wrapper]'
     );
     const coordinatesEL = document.createElement('pre');
+    coordinatesEL.classList.add('small');
 
     if (!navigator.geolocation) {
       alert("Sorry, your browser doesn't have geolocation functionality ☹.");
