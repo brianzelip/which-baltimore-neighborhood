@@ -3,7 +3,6 @@
   --fg-darkmode: #12b337;
   --bg-lightmode: #fefafd;
   --fg-lightmode: #51788f;
-
   --shadow-thickness: 0.3rem;
 }
 
@@ -13,12 +12,10 @@ body {
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   text-align: center;
 }
-
 .dark {
   background-color: var(--bg-darkmode);
   color: var(--fg-darkmode);
 }
-
 .light {
   background-color: var(--bg-lightmode);
   color: var(--fg-lightmode);
@@ -31,7 +28,6 @@ a {
 }
 a:hover {
   box-shadow: 0 1px;
-  /* text-decoration: underline; */
   transition: all 150ms ease-in-out;
 }
 
@@ -135,39 +131,18 @@ body.light .neighborhood {
 
 pre {
   padding-bottom: 0.875rem;
-  font-size: 0.875rem;
   overflow-x: scroll;
-}
-@media screen and (min-width: 720px) {
-  pre {
-    font-size: 1rem;
-  }
 }
 
 .hide {
   opacity: 0;
 }
-
 .fadein {
   opacity: 1;
   transition: all 300ms ease-in-out;
 }
-
 .fadein.delay {
   transition-delay: 300ms;
-}
-
-footer,
-footer a,
-footer p {
-  font-size: 0.875rem;
-}
-@media screen and (min-width: 720px) {
-  footer,
-  footer a,
-  footer p {
-    font-size: 1rem;
-  }
 }
 
 footer {
@@ -183,7 +158,6 @@ footer {
     padding-bottom: 1rem;
   }
 }
-
 footer a:first-of-type {
   margin-right: 0.2rem;
 }
@@ -192,4 +166,13 @@ footer a:last-of-type {
 }
 footer p {
   margin: 0.5rem 0 0 0;
+}
+
+.small {
+  font-size: 0.875rem;
+}
+@media screen and (min-width: 720px) {
+  .small {
+    font-size: 1rem;
+  }
 }
