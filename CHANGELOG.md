@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.9.0] 2019-11-25
+
+- branch: topography-bg
+- description: Add a svg background to the body via [Hero Patterns](http://www.heropatterns.com/)
+  - use the Topography pattern, adapted for my design
+  - dynamically set the svg's fill color based on app theme
+
+### Added
+
+- topography.js: create es6 module that exports a function that returns a string representing a css background-image url of a data encoded svg 🎉
+
+### Updated
+
+- main.js
+  - import { dataImageUrl } from topography.js
+  - set body.style.backgroundImage to default dark mode
+  - update body.style.backgroundImage on color mode toggle click
+
 ## [v0.8.0] 2019-11-23
 
 - branch: inline-css

@@ -1,6 +1,9 @@
 import { polygonContains } from 'd3-polygon';
 
+import { dataImageUrl } from './topography.js';
+
 (function() {
+  document.body.style.backgroundImage = dataImageUrl('dark');
   const buttonEl = document.querySelector('button');
 
   buttonEl.addEventListener('click', function() {
@@ -8,8 +11,10 @@ import { polygonContains } from 'd3-polygon';
 
     if (currentTheme === 'dark') {
       document.body.className = 'light';
+      document.body.style.backgroundImage = dataImageUrl('light');
     } else if (currentTheme === 'light') {
       document.body.className = 'dark';
+      document.body.style.backgroundImage = dataImageUrl('dark');
     }
   });
 
