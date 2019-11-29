@@ -39,7 +39,9 @@ import { dataImageUrl } from './topography.js';
     coordinatesEL.classList.add('small');
 
     if (!navigator.geolocation) {
-      alert("Sorry, your browser doesn't have geolocation functionality ☹.");
+      alert(
+        "Sorry, the web browser can not get your device's location ☹. Maybe try updating the browser?"
+      );
       return;
     } else {
       function geo_success(position) {
@@ -52,6 +54,13 @@ import { dataImageUrl } from './topography.js';
           const polygon = feature.geometry.coordinates[0][0];
           return polygonContains(polygon, point);
         });
+
+        if (HOOD === []) {
+          alert(
+            `Sorry, you appear to be outside Baltimore. You should visit, it's a charming place.`
+          );
+          return;
+        }
 
         const hoodName = HOOD[0].properties.label;
 
@@ -88,7 +97,9 @@ import { dataImageUrl } from './topography.js';
       }
 
       function geo_error() {
-        alert('Sorry, no position available.');
+        alert(
+          `Your position is not available. Maybe try turning on location services for your web browser.`
+        );
       }
 
       var geo_options = {
