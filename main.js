@@ -55,6 +55,13 @@ import { dataImageUrl } from './topography.js';
           return polygonContains(polygon, point);
         });
 
+        if (HOOD === []) {
+          alert(
+            `Sorry, you appear to be outside Baltimore. You should visit, it's a charming place.`
+          );
+          return;
+        }
+
         const hoodName = HOOD[0].properties.label;
 
         function urlEncode(str) {
