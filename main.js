@@ -39,7 +39,9 @@ import { dataImageUrl } from './topography.js';
     coordinatesEL.classList.add('small');
 
     if (!navigator.geolocation) {
-      alert("Sorry, your browser doesn't have geolocation functionality ☹.");
+      alert(
+        "Sorry, the web browser can not get your device's location ☹. Maybe try updating the browser?"
+      );
       return;
     } else {
       function geo_success(position) {
