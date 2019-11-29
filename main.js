@@ -98,7 +98,7 @@ import { dataImageUrl } from './topography.js';
 
       function geo_error() {
         alert(
-          `Your position is not available. Maybe try turning on your device's location services for your web browser.`
+          `Your position is not available. Maybe try turning on location services for your web browser.`
         );
       }
 
