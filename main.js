@@ -90,7 +90,9 @@ import { dataImageUrl } from './topography.js';
       }
 
       function geo_error() {
-        alert('Sorry, no position available.');
+        alert(
+          `Your position is not available. Maybe try turning on your device's location services for your web browser.`
+        );
       }
 
       var geo_options = {
