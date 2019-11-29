@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.10.0] 2019-11-29
+
+- branch: error-handling
+- description:
+  - provide error messages to user
+    1. JavaScript is disabled
+    2. your browser doesn't support geolocation
+    3. your os appears to have disabled location services for your browser
+    4. you appear to be outside the city of Baltimore
+
+### Updated
+
+- index.html: Add `<noscript>`
+- main.js:
+  - Check for geo navigator feature
+  - if no self coordinates return, throw error
+  - if coords are not found in any Bmore neighborhood, throw outside city error
+
 ## [v0.9.0] 2019-11-25
 
 - branch: topography-bg
