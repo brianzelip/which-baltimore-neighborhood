@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - branch: error-handling
 - description:
-  - provide error messages to user
+  - provide error messages to user when
     1. JavaScript is disabled
     2. your browser doesn't support geolocation
     3. your os appears to have disabled location services for your browser
