@@ -55,9 +55,9 @@ import { dataImageUrl } from './topography.js';
           return polygonContains(polygon, point);
         });
 
-        if (HOOD === []) {
+        if (!Array.isArray(HOOD) || !HOOD.length) {
           alert(
-            `Sorry, you appear to be outside Baltimore. You should visit, it's a charming place.`
+            `It appears you're not in Baltimore. You should visit when you get the chance, it's a charming place!`
           );
           return;
         }
