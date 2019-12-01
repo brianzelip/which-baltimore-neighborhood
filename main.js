@@ -64,14 +64,17 @@ import { dataImageUrl } from './topography.js';
 
         const hoodName = HOOD[0].properties.label;
 
-        function urlEncode(str) {
-          return str.replace(/\s/g, '+');
+        function encodeHoodName(name) {
+          return name
+            .concat(', Baltimore')
+            .replace(/\s/g, '+')
+            .replace(/,/g, '%2C');
         }
 
         coordinatesEL.textContent = coordsAsText;
         hoodWrapEl.setAttribute(
           'href',
-          `https://en.wikipedia.org/wiki/Special:Search?search=${urlEncode(
+          `https://en.wikipedia.org/wiki/Special:Search?search=${encodeHoodName(
             hoodName
           )}`
         );
