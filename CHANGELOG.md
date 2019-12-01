@@ -7,7 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [v0.10.1] 2019-11-20
+## [v0.10.2] 2019-11-30
+
+- branch: master
+- description: Add 'Baltimore' to the url encoded wikipedia search query
+
+### Updated
+
+- main.js:
+  - add ', Baltimore' to the query string,
+  - url encode the comma char,
+  - rename the encoding function
+
+## [v0.10.1] 2019-11-30
 
 - branch: master
 - description: Fix out of town error alert
