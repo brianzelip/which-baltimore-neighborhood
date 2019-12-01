@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.10.1] 2019-11-20
+
+- branch: master
+- description: Fix out of town error alert
+
+### Updated
+
+- main.js: test for `HOOD` as an empty array in a better way, update the alert message
+
 ## [v0.10.0] 2019-11-29
 
 - branch: error-handling
