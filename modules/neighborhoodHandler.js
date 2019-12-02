@@ -1,6 +1,6 @@
 'use strict';
 
-import geo from './geolocation.js';
+import geo from './geolocationHandler.js';
 
 export default function() {
   const NEIGHBORHOODS =
