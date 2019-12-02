@@ -7,6 +7,43 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.11.0] 2019-12-02
+
+- branch: localstorage
+- description: cache city data via [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+
+### Added
+
+- modules/geolocationHandler.js
+  - refactor geolocation logic from main.js into its own module
+  - make the default export function accept a data object so that its parent can pass data to this module
+  - use es6 object destructuring to create locally-scoped variables from the passed in data object
+  - this is my first example of creating my own front end framework-like functionality of passing props to a child component 🎉
+- modules/storageAvailable.js: create modult to test for `Window.localStorage` availability via [MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API#Testing_for_availability)
+- modules/themeHandler.js
+  - refactor all the logic that handles theme toggling to its own module
+  - this module doesn't export anything, so it's like main.js just imports the whole file as is on `import themeHandler from './themehandler.js'`, since I never call `themeHandler()` as a function
+- modules/xhrHandler.js
+  - refactor all the xhr logic to its own module
+  - this module calls the `neighborhoodHandler` module in the `xhr.onload` statement
+    - data needs to be passed to neighborhoodHandler. Since `xhr.onload = neighborhoodHandler` doesn't work when the callback is written as a called function (ie: `xhr.onload = neighborhoodHandler()`), I add a new property onto the xhr object with the data that the sub module needs so the sub module can access the data.
+      - The sub module will receive the xhr object without me explicitly passing the object to it (via the internal workings of a XMLHttpRequest).
+      - this way, the sub module can call `this.setLocalStorage` to get access to the `setLocalStorage` argument that was passed to the xhrHandler.
+- modules/neighborhoodHandler.js
+  - refactor the neighborhood handling logic into its own module
+  - **this is where `Window.localStorage` is set**
+    - the `NEIGHBORHOODS` data variable is now defined either from the xhr or from localStorage
+    - if `localStorage.NEIGHBORHOODS` does not already exist, the module sets a NEIGHBORHOODS key onto localStorage with a value of the fetched data via the xhr
+
+### Updated
+
+- main.js
+  - refactor around the use of sub modules
+  - the flow is now:
+   - if localStorage is available, but the Baltimore open data is not already available in localStorage, the xhrHandler gets the data, and passes it off to the neighborhoodHandler which updates the DOM and writes the data to localStorage.NEIGHBORHOODS
+   - if localeStorage is available and localStorage.NEIGHBORHOODS exists, the neighborhoodHandler is called to update the DOM
+   - if localStorage is not available, the xhrHandler is called to fetch the data, and the neighborhoodsHandler then updates the DOM without writing the data to localStorage
+
 ## [v0.10.2] 2019-11-30
 
 - branch: master
