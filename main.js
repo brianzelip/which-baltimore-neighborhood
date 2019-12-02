@@ -1,4 +1,5 @@
 import { dataImageUrl } from './topography.js';
+import storageAvailable from './storageAvailable.js';
 import geo from './geolocation.js';
 
 (function() {
