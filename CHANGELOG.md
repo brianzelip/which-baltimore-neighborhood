@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.11.0] 2019-12-02
+
+- branch: localstorage
+- description: cache city data via [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+
+### Added
+
+- geolocation.js
+- storageAvailable.js
+
+### Updated
+
+- ## main.js
+
 ## [v0.10.2] 2019-11-30
 
 - branch: master
