@@ -1,7 +1,7 @@
-import themeHandler from './themeHandler.js';
-import storageAvailable from './storageAvailable.js';
-import xhrHandler from './xhrHandler.js';
-import neighborhoodHandler from './neighborhoodHandler.js';
+import themeHandler from './modules/themeHandler.js';
+import storageAvailable from './modules/storageAvailable.js';
+import xhrHandler from './modules/xhrHandler.js';
+import neighborhoodHandler from './modules/neighborhoodHandler.js';
 
 (function() {
   if (storageAvailable('localStorage')) {
