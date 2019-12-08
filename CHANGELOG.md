@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.12.0] 2019-12-08
+
+- branch: persistent-color-theme
+- description: persist the user's color theme selection in localstorage
+
+### Updated
+
+- modules/themeHandler.js
+
 ## [v0.11.1] 2019-12-08
 
 - branch: master
