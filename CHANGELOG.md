@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.11.1] 2019-12-08
+
+- branch: master
+- description: update dependency version for security fix via github dependabot
+
+### Updated
+
+- package-lock.json: bump serialize-to-js to v3.0.1
+
 ## [v0.11.0] 2019-12-02
 
 - branch: localstorage
@@ -40,9 +49,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - main.js
   - refactor around the use of sub modules
   - the flow is now:
-   - if localStorage is available, but the Baltimore open data is not already available in localStorage, the xhrHandler gets the data, and passes it off to the neighborhoodHandler which updates the DOM and writes the data to localStorage.NEIGHBORHOODS
-   - if localeStorage is available and localStorage.NEIGHBORHOODS exists, the neighborhoodHandler is called to update the DOM
-   - if localStorage is not available, the xhrHandler is called to fetch the data, and the neighborhoodsHandler then updates the DOM without writing the data to localStorage
+  - if localStorage is available, but the Baltimore open data is not already available in localStorage, the xhrHandler gets the data, and passes it off to the neighborhoodHandler which updates the DOM and writes the data to localStorage.NEIGHBORHOODS
+  - if localeStorage is available and localStorage.NEIGHBORHOODS exists, the neighborhoodHandler is called to update the DOM
+  - if localStorage is not available, the xhrHandler is called to fetch the data, and the neighborhoodsHandler then updates the DOM without writing the data to localStorage
 
 ## [v0.10.2] 2019-11-30
 
