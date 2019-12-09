@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - branch: persistent-color-theme
 - description: persist the user's color theme selection in localstorage
+  - in so doing, refactor the use of localStorage throughout the app into a module that exports the needed functions that currently exist
 
 ### Updated
 
