@@ -22,6 +22,6 @@ buttonEl.addEventListener('click', function() {
 
 function setLocalTheme(theme) {
   if (ls.isAvailable()) {
-    localStorage.setItem('THEME', theme);
+    ls.set('THEME', theme);
   }
 }
