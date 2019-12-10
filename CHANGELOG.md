@@ -7,9 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### TODO
+## [v0.13.0] 2019-12-10
 
-- refactor the use of localStorage throughout the app into a module that exports the needed functions that currently exist
+- branch: modularize-localstorage
+- description: refactor the use of localStorage throughout the app into a module that exports the needed functions that currently exist
+
+### Added
+
+- modules/localStorage.js
+  - export these functions
+    - check if storage is available and usable
+    - set NEIGHBORHOODS
+    - set THEME
+    - ?
 
 ## [v0.12.0] 2019-12-10
 
