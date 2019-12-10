@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [v0.13.1] 2019-12-10
 
 - branch: master
-- description: fix body svg color when setting theme via localStorage
+- description: fix body svg color when setting theme via localStorage (v0.13.0 set the bgImage svg color to green even when light mode was set via localStorage)
 
 ### Updated
 
