@@ -1,11 +1,11 @@
 'use-strict';
 
-function isAvailable(type) {
+function isAvailable() {
   // via https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API#Testing_for_availability
 
   let storage;
   try {
-    storage = window[type];
+    storage = window.localStorage;
     const x = '__storage_test__';
     storage.setItem(x, x);
     storage.removeItem(x);
