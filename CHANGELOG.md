@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.14.0] 2019-12-10
+
+- branch: static
+- description: copy static file (humans.txt) to build directory on build
+
+### Updated
+
+- package.json:
+  - add `static` script that hard code copies humans.txt to dist/
+  - add `&& npm run static` to `build` script
+
 ## [v0.13.1] 2019-12-10
 
 - branch: master
