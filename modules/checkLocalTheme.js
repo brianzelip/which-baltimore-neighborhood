@@ -1,8 +1,8 @@
 'use stric';
 
-import storageAvailable from './storageAvailable.js';
+import * as ls from './localStorage';
 
-if (storageAvailable('localStorage')) {
+if (ls.isAvailable()) {
   if (localStorage.getItem('THEME')) {
     const bodyEl = document.querySelector('body');
     bodyEl.setAttribute('class', localStorage.getItem('THEME'));

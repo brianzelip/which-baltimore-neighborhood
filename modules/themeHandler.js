@@ -1,7 +1,7 @@
 'use strict';
 
 import { dataImageUrl } from './topography.js';
-import storageAvailable from './storageAvailable.js';
+import * as ls from './localStorage.js';
 
 document.body.style.backgroundImage = dataImageUrl('dark');
 const buttonEl = document.querySelector('button');
@@ -21,7 +21,7 @@ buttonEl.addEventListener('click', function() {
 });
 
 function setLocalTheme(theme) {
-  if (storageAvailable('localStorage')) {
+  if (ls.isAvailable()) {
     localStorage.setItem('THEME', theme);
   }
 }
