@@ -42,4 +42,12 @@ function isAvailable() {
    */
 }
 
-export { isAvailable };
+function get(item) {
+  return localStorage.getItem(item);
+}
+
+function set(item, value) {
+  localStorage.setItem(item, value);
+}
+
+export { isAvailable, get, set };
