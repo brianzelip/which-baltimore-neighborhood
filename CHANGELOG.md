@@ -17,9 +17,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - modules/localStorage.js
   - export these functions
     - check if storage is available and usable
-    - set NEIGHBORHOODS
-    - set THEME
-    - ?
+      - checkLocalTheme.js
+      - themeHandler.js
+    - get a localStorage item
+      - checkLocalTheme.js
+      - neighborhoodHandler.js
+    - set a localStorage item
+      - themeHandler.js
+      - neighborhoodHandler.js
 
 ## [v0.12.0] 2019-12-10
 
