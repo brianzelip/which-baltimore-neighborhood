@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### TODO
+
+- refactor the use of localStorage throughout the app into a module that exports the needed functions that currently exist
+
+## [v0.12.0] 2019-12-10
+
+- branch: persistent-color-theme
+- description: persist the user's color theme selection in localstorage
+
+### Added
+
+- modules/checkLocalTheme.js: sets theme class on body if localStorage.THEME exists
+
+### Updated
+
+- modules/themeHandler.js: sets localStorage.THEME on click
+- main.js: import checkLocalTheme.js (in the way where it's never used/called outside of the import)
+
 ## [v0.11.1] 2019-12-08
 
 - branch: master

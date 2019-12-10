@@ -1,3 +1,4 @@
+import checkLocalTheme from './modules/checkLocalTheme.js';
 import themeHandler from './modules/themeHandler.js';
 import storageAvailable from './modules/storageAvailable.js';
 import xhrHandler from './modules/xhrHandler.js';
