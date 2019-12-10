@@ -1,4 +1,4 @@
-import checkLocalTheme from './modules/checkLocalTheme.js';
+import initTheme from './modules/initTheme.js';
 import themeHandler from './modules/themeHandler.js';
 import * as ls from './modules/localStorage.js';
 import xhrHandler from './modules/xhrHandler.js';
