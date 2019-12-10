@@ -3,7 +3,6 @@
 import { dataImageUrl } from './topography.js';
 import * as ls from './localStorage.js';
 
-document.body.style.backgroundImage = dataImageUrl('dark');
 const buttonEl = document.querySelector('button');
 
 buttonEl.addEventListener('click', function() {
