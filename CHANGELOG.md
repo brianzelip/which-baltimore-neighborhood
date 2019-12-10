@@ -14,17 +14,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- modules/localStorage.js
-  - export these functions
-    - check if storage is available and usable
-      - checkLocalTheme.js
-      - themeHandler.js
-    - get a localStorage item
-      - checkLocalTheme.js
-      - neighborhoodHandler.js
-    - set a localStorage item
-      - themeHandler.js
-      - neighborhoodHandler.js
+- modules/localStorage.js: export check, get, and set
+
+### Updated
+
+- main.js: import and use localStorage module
+- checkLocalTheme.js: import and use localStorage module
+- neighborhoodHandler.js: import and use localStorage module
+- themeHandler.js: import and use localStorage module
 
 ## [v0.12.0] 2019-12-10
 
