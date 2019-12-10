@@ -1,11 +1,11 @@
-'use strict';
+'use-strict';
 
-// via https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API#Testing_for_availability
+function isAvailable() {
+  // via https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API#Testing_for_availability
 
-export default function storageAvailable(type) {
-  var storage;
+  let storage;
   try {
-    storage = window[type];
+    storage = window.localStorage;
     const x = '__storage_test__';
     storage.setItem(x, x);
     storage.removeItem(x);
@@ -27,18 +27,27 @@ export default function storageAvailable(type) {
       storage.length !== 0
     );
   }
+  /**
+   * use it like:
+   *
+   * ```js
+   if (storageAvailable('localStorage')) {
+      // Yippee! We can use localStorage awesomeness
+    }
+    else {
+      // Too bad, no localStorage for us
+    }
+   * ```
+   *
+   */
 }
 
-/**
- * use it like:
- *
- * ```js
- if (storageAvailable('localStorage')) {
-    // Yippee! We can use localStorage awesomeness
-  }
-  else {
-    // Too bad, no localStorage for us
-  }
- * ```
- *
- */
+function get(item) {
+  return localStorage.getItem(item);
+}
+
+function set(item, value) {
+  localStorage.setItem(item, value);
+}
+
+export { isAvailable, get, set };

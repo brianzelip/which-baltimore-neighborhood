@@ -1,12 +1,13 @@
 'use strict';
 
+import * as ls from './localStorage.js';
 import geo from './geolocationHandler.js';
 
 export default function() {
   const NEIGHBORHOODS =
     this != undefined && this.responseText
       ? JSON.parse(this.responseText)
-      : JSON.parse(localStorage.getItem('NEIGHBORHOODS'));
+      : JSON.parse(ls.get('NEIGHBORHOODS'));
 
   const hoodWrapEl = document.querySelector('[data-hood-wrap]');
   const neighborhoodEl = document.querySelector('[data-neighborhood]');
@@ -24,6 +25,6 @@ export default function() {
   });
 
   if (this != undefined && this.setLocalStorage) {
-    localStorage.setItem('NEIGHBORHOODS', JSON.stringify(NEIGHBORHOODS));
+    ls.set('NEIGHBORHOODS', JSON.stringify(NEIGHBORHOODS));
   }
 }
