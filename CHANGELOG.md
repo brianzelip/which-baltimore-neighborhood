@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.13.1] 2019-12-10
+
+- branch: master
+- description: fix body svg color when setting theme via localStorage
+
+### Updated
+
+- checkLocalTheme.js:
+  - add console.log to else statement
+  - import and use topography.js
+  - rename module initTheme.js
+- main.js: import new initTheme.js module
+
 ## [v0.13.0] 2019-12-10
 
 - branch: modularize-localstorage
