@@ -7,5 +7,7 @@ if (storageAvailable('localStorage')) {
     const bodyEl = document.querySelector('body');
     bodyEl.setAttribute('class', localStorage.getItem('THEME'));
     console.log('Awesome, localStorage.THEME exists!');
+  } else {
+    console.log('localStorage.THEME does not yet exist, but soon should.');
   }
 }
