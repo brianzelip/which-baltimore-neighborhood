@@ -131,7 +131,7 @@ body.light .neighborhood {
 
 pre {
   padding-bottom: 0.875rem;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 .hide {
