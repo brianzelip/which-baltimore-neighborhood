@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.14.1] 2019-12-12
+
+- branch: master
+- description: fix overflow-x styling on the coordinates
+
+### Updated
+
+- hood.css: change the `pre`'s `overflow-x` value from `scroll` to `auto` to hide the always-visible horizontal scroll bar on windows desktop
+
 ## [v0.14.0] 2019-12-10
 
 - branch: static
