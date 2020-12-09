@@ -4,7 +4,7 @@
 
 Geolocation progressive web app that tells you which Baltimore neighborhood you're in.
 
-https://bmore.space
+https://which-bmore-hood.netlify.app/
 
 ## Road map to v1.0.0
 
