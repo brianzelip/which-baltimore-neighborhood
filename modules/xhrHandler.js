@@ -9,7 +9,8 @@ export default function(setLocalStorage) {
   // setLocalStorage is a boolean
   const xhr = new XMLHttpRequest();
   const method = 'GET';
-  const url = 'https://data.baltimorecity.gov/resource/h3fx-54q3.geojson';
+  const url =
+    'https://opendata.baltimorecity.gov/egis/rest/services/Hosted/Neighborhoods/FeatureServer/0/query?where=1%3D1&outFields=name&outSR=4326&f=geojson';
 
   // need to pass data to neighborhoodHandler
   // but xhr.onload = neighborhoodHandler(data) won't work,

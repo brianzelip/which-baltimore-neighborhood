@@ -23,8 +23,12 @@ export default function(dataObj) {
       const coordsAsText = `${lat}, ${long}`;
       const point = [long, lat];
 
-      const HOOD = NEIGHBORHOODS.features.filter(feature => {
-        const polygon = feature.geometry.coordinates[0][0];
+      const HOOD = NEIGHBORHOODS.features.filter((feature) => {
+        // Two feature types: polygon, multipolygon
+        const isPolygon = feature.geometry.type === 'Polygon';
+        const polygon = isPolygon
+          ? feature.geometry.coordinates[0]
+          : feature.geometry.coordinates[0][0];
         return polygonContains(polygon, point);
       });
 
@@ -35,7 +39,7 @@ export default function(dataObj) {
         return;
       }
 
-      const hoodName = HOOD[0].properties.label;
+      const hoodName = HOOD[0].properties.name;
 
       function encodeHoodName(name) {
         return name
