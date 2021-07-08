@@ -50,4 +50,8 @@ function set(item, value) {
   localStorage.setItem(item, value);
 }
 
-export { isAvailable, get, set };
+function remove(item) {
+  localStorage.removeItem(item);
+}
+
+export { isAvailable, get, set, remove };

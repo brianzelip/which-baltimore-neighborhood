@@ -7,7 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [v0.14.1] 2021-07-08
+## [v0.14.3] 2021-07-08
+
+- description: Remove old local storage data if on user's device
+
+### Updated
+
+- modules/localStorage.js: Add function to remove localstorage item
+- modules/neighborhoodHandler.js: Get v2 data if exists in localstorage
+- main.js:
+  - Delete old localstorage data if exists
+  - Set new localstorage data
+
+## [v0.14.2] 2021-07-08
 
 - description: Refactor in new Open Baltimore neighborhoods data
 

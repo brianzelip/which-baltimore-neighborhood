@@ -7,7 +7,7 @@ export default function() {
   const NEIGHBORHOODS =
     this != undefined && this.responseText
       ? JSON.parse(this.responseText)
-      : JSON.parse(ls.get('NEIGHBORHOODS'));
+      : JSON.parse(ls.get('NEIGHBORHOODSv2'));
 
   const hoodWrapEl = document.querySelector('[data-hood-wrap]');
   const neighborhoodEl = document.querySelector('[data-neighborhood]');
@@ -25,6 +25,6 @@ export default function() {
   });
 
   if (this != undefined && this.setLocalStorage) {
-    ls.set('NEIGHBORHOODS', JSON.stringify(NEIGHBORHOODS));
+    ls.set('NEIGHBORHOODSv2', JSON.stringify(NEIGHBORHOODS));
   }
 }
