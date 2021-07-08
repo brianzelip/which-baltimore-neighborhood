@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.14.1] 2021-07-08
+
+- description: Refactor in new Open Baltimore neighborhoods data
+
+### Updated
+
+- modules/xhrHandler.js: update API endpoint
+- modules/geolocationHandler.js: use new data shape (the data is now based mostly on polygons, with some multipolygons; whereas previous data was only multipolygons)
+- data/Neighborhoods.geojson: replace with new data
+
+### Removed
+
+- data/formattedExample.json: removed this unnecessary file, since the new data allows for selecting which properties to include for each neighborhood boundary set. I only selected the name property, so the geojson file is much smaller and easier to wield and format in a text editor.
+
 ## [v0.14.1] 2019-12-12
 
 - branch: master

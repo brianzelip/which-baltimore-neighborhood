@@ -19,8 +19,8 @@ https://which-bmore-hood.netlify.app/
 
 ## Data source
 
-The geospatial data used in this project comes from the [_Neighborhoods_ dataset](https://data.baltimorecity.gov/Neighborhoods/Neighborhoods/5cni-ybar) published via [Open Baltimore](https://data.baltimorecity.gov/), the City of Baltimore's open data initiative. The _Neighborhoods_ dataset is described as
+The geospatial data used in this project comes from the [_Neighborhoods_ dataset](https://data.baltimorecity.gov/datasets/baltimore::neighborhoods-3/about) published via [Open Baltimore](https://data.baltimorecity.gov/), the City of Baltimore's open data initiative. The _Neighborhoods_ dataset is described as
 
 > Polygon feature representing the boundaries of Baltimore City's neighborhoods as of the year 2010.
 
-See also the [developer docs for the _Neighborhoods_ dataset](https://dev.socrata.com/foundry/data.baltimorecity.gov/h3fx-54q3).
+See also the [developer docs for their new API](https://developers.arcgis.com/rest/services-reference/enterprise/query-feature-service-layer-.htm).
