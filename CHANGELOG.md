@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.14.4] 2021-07-11
+
+### Added
+
+- .htmlnanorc: Configure Parcel to not minify svg to fix `tree.render is not a function` build error, see https://stackoverflow.com/a/67133536/2145103; this error happened _after_ the updates below.
+
+### Updated
+
+- package-lock.json
+  - Merged multiple Dependabot PRs for package updates
+  - ran `npm audit fix` for a few vulnerability fixes
+
 ## [v0.14.3] 2021-07-08
 
 - description: Remove old local storage data if on user's device
